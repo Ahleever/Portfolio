@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 5%;
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; }
+
+        /* Project Grid */
+        .container { padding: 50px 5%; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card-img {
+            height: 200px;
+            background: #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+        }
+
+        .card-content { padding: 1.5rem; }
+        .tag {
+            font-size: 0.8rem;
+            background: #dbeafe;
+            color: var(--primary);
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        footer { text-align: center; padding: 40px; color: var(--gray); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight: bold; font-size: 1.5rem;">Oliver's Portfolio</div>
+        <div>
+            <a href="#projects" style="text-decoration: none; color: var(--dark);">Projects</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Hey, I'm Oliver Montero</h1>
+        <p>Aspiring Full-Stack Developer</p>
+    </header>
+
+    <section class="featured-section" style="background: white; padding: 60px 5%; border-bottom: 1px solid #e2e8f0;">
+        <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+            
+            <div style="flex: 1; min-width: 300px;">
+                <div style="background: #e2e8f0; border-radius: 12px; height: 350px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--primary); color: var(--gray); overflow: hidden;">
+                    <span style="font-weight: bold;">[ Insert App Screenshot Here ]</span>
+                </div>
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <span style="color: var(--primary); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Featured Project</span>
+                <h2 style="font-size: 2.5rem; margin: 10px 0;">Smart Calorie Tracker</h2>
+                <p style="font-size: 1.1rem; color: var(--gray);">
+                    A full-stack health application built with <strong>Django</strong> and <strong>PostgreSQL</strong>. It allows users to log meals via the OpenFoodFacts API, visualize macro data with Chart.js, and track weight goals over time.
+                </p>
+                
+                <div style="margin: 15px 0;">
+                    <span class="tag">Python</span>
+                    <span class="tag">Django</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Chart.js</span>
+                    <span class="tag">Bootstrap 5</span>
+                </div>
+
+                <ul style="list-style: none; padding: 0; margin: 20px 0;">
+                    <li style="margin-bottom: 10px;">✅ <strong>API Integration:</strong> Real-time food search using OpenFoodFacts.</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>Data Visualization:</strong> Dynamic doughnut and line charts for macros/weight.</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>Cloud Hosted:</strong> Deployed on Render with a production database.</li>
+                </ul>
+
+                <div style="margin-top: 25px;">
+                    <a href="https://your-app-name.onrender.com" target="_blank" class="btn" style="padding: 12px 24px; font-weight: bold;">View Live Demo</a>
+                    
+                    <a href="https://github.com/Ahleever/CalorieTrackerApp" target="_blank" style="margin-left: 15px; color: var(--dark); text-decoration: none; font-weight: 500;">View GitHub Repo →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="projects">
+        <h2>Other Projects</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-img">Project Preview</div>
+                <div class="card-content">
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <h3>E-Commerce Landing Page</h3>
+                    <p>A fully responsive landing page for an e-market with modern UI principles.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">Project Preview</div>
+                <div class="card-content">
+                    <span class="tag">Python</span>
+                    <span class="tag">Tkinter</span>
+                    <h3>Desktop Calorie Tool</h3>
+                    <p>The original desktop prototype of the calorie tracker built with Python and Tkinter.</p>
+                    <a href="#" class="btn">View Source</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Oliver Montero. Built with passion.</p>
+    </footer>
+
+</body>
+</html>
