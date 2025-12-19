@@ -38,7 +38,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 80px 5%;
+            padding: 60px 5%;
             text-align: center;
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: white;
@@ -102,8 +102,13 @@
 
     <nav>
         <div style="font-weight: bold; font-size: 1.5rem;">Oliver's Portfolio</div>
-        <div>
+        <div class="d-flex gap-3">
+            <a href="https://docs.google.com/document/d/e/2PACX-1vQvF08LGgTfb9AcLyj6kuaIV7Ws8qPIcvpwnvO3iXb4ZriHO-dIENXI8h9m-kNKJfPXZu5LBdZeyqvW/pub" target="_blank" style="text-decoration: none; color: var(--dark);">
+              <u>View My Resume</u>
+            </a>            
+            <a href="#about" style="text-decoration: none; color: var(--dark);">About</a>
             <a href="#projects" style="text-decoration: none; color: var(--dark);">Projects</a>
+            
         </div>
     </nav>
 
@@ -111,6 +116,55 @@
         <h1>Hey, I'm Oliver Montero</h1>
         <p>Aspiring Full-Stack Developer</p>
     </header>
+    <section id="about" style="padding: 80px 5%; background-color: white;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            
+            <div class="row align-items-center g-5">
+                
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 style="font-size: 2rem; margin: 0;">About Me</h2>
+                        <img src="favicon.png" alt="Logo" style="width: 150px; height: 150px; margin-left: 15px; border-radius: 50%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    </div>
+                    <p style="font-size: 1.1rem; color: var(--gray); margin-bottom: 15px;">
+                        Hello! I'm <strong>Oliver Montero</strong>, an aspiring software developer with a focus on building scalable web applications.
+                    </p>
+                    <p style="font-size: 1.1rem; color: var(--gray);">
+                        I specialize in both <strong>Backend logic</strong> (Python/Django, Node.js) and <strong>Frontend experiences</strong> (JavaScript, Bootstrap). My goal is to bridge the gap between complex data systems and intuitive user interfaces.
+                    </p>
+                    <div style="margin-top: 25px;">
+                        <a href="mailto:monterooliver97@gmail.com?subject=Contacting you from your Portfolio!" class="btn">Get In Touch</a>
+                        </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div style="background: var(--light); padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 20px;">My Tech Stack</h3>
+                        
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-white text-dark border p-2">Python 🐍</span>
+                            <span class="badge bg-white text-dark border p-2">Django 🎸</span>
+                            <span class="badge bg-white text-dark border p-2">JavaScript ⚡</span>
+                            <span class="badge bg-white text-dark border p-2">Node.js 🟢</span>
+                            <span class="badge bg-white text-dark border p-2">PostgreSQL 🐘</span>
+                            <span class="badge bg-white text-dark border p-2">MySQL 🐬</span>
+                            <span class="badge bg-white text-dark border p-2">HTML5 / CSS3 🎨</span>
+                            <span class="badge bg-white text-dark border p-2">Bootstrap 5 🅱️</span>
+                            <span class="badge bg-white text-dark border p-2">Git / GitHub 🐙</span>
+                            <span class="badge bg-white text-dark border p-2">REST APIs 🔗</span>
+                        </div>
+
+                        <hr style="margin: 20px 0; opacity: 0.1;">
+                        <small class="text-muted d-block mb-2">Currently exploring:</small>
+                        <span class="badge bg-primary bg-opacity-10 text-primary border border-primary p-2">React.js</span>
+                        <span class="badge bg-primary bg-opacity-10 text-primary border border-primary p-2">Cloud Deployment</span>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
 
     <section class="featured-section" style="background: white; padding: 60px 5%; border-bottom: 1px solid #e2e8f0;">
         <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
@@ -135,7 +189,7 @@
                 </div>
 
                 <ul style="list-style: none; padding: 0; margin: 20px 0;">
-                    <li style="margin-bottom: 10px;">✅ <strong>API Integration:</strong> Real-time food search using OpenFoodFacts and locale based weather data from Open Weather API.</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>API Integration:</strong> Real-time food search using USDA FoodData Central API and locale based weather data from Open Weather API.</li>
                     <li style="margin-bottom: 10px;">✅ <strong>Data Visualization:</strong> Dynamic doughnut and line charts for macros/weight and a water tracker.</li>
                     <li style="margin-bottom: 10px;">✅ <strong>Cloud Hosted:</strong> Deployed on Render with a production database.</li>
                 </ul>
@@ -282,7 +336,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Oliver Montero. Built with passion.</p>
+        <p>&copy; 2025 Oliver Montero. For the love of the game.</p>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
